@@ -149,7 +149,6 @@ function inputsMechanism(rows) {
     input.addEventListener("input", () => {
       if (input.value.length === 1) {
         checkingWord = getWord(inputs)
-        console.log(checkingWord)
         if (index !== inputs.length - 1) {
           input.classList.remove('active')
           input.blur()
@@ -162,7 +161,6 @@ function inputsMechanism(rows) {
     input.addEventListener("keydown", (event) => {
       if (event.key === "Backspace") {
         checkingWord = getWord(inputs)
-        console.log(checkingWord)
         if (index !== 0 && input.value === "") {
           input.blur()
           input.classList.remove('active')
