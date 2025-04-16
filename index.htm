@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>Guessing Word Game</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Welcome Screen -->
+    <section id="welcome-screen">
+      <h1>
+        <p>Guessing Word Game</p>
+        <div class="icons user-select-none">
+
+          <div class="dark-mode-btn" title="Change theme">
+            <i class="fa-solid fa-moon"></i>
+            <img style="display: none;" src="./images/sun-svgrepo-com.svg" alt="">
+          </div>
+           <div class="game-rules" title="Game Rules"><i class="fa-solid fa-info"></i></div>
+        </div>
+      </h1>
+      <form>
+        <p>Choose word length:</p>
+        <div class="btns">
+          <button class="btn-glabal clicked" data-length="four">4</button>
+          <button class="btn-glabal" data-length="five">5</button>
+          <button class="btn-glabal" data-length="six">6</button>
+        </div>
+        <button class="btn-glabal start-btn">Start Game</button>
+      </form>
+    </section>
+
+    <!-- Game Rules Modal -->
+    <div class="game-rules-modal">
+      <h2><p>Game Rules</p><div class="close"><i class="fa-solid fa-xmark"></i></div></h2>
+      <ul>
+        <li><div class="color"></div>Letter is in the word and in the correct position.</li>
+        <li><div class="color"></div>Letter is in the word but in the wrong position.</li>
+        <li><div class="color"></div>Letter is not in the word.</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <section id="game-screen">
+    <!-- header -->
+    <header>
+      <div class="container">
+        <!-- h2 -->
+        <h2>Guess the word</h2>
+        <!-- icons -->
+        <div class="icons user-select-none">
+          <div class="try-again" title="Try again">
+            <i class="fa-solid fa-rotate-left"></i>
+          </div>
+          <div class="dark-mode-btn" title="Change theme">
+            <i class="fa-solid fa-moon"></i>
+            <img style="display: none;" src="./images/sun-svgrepo-com.svg" alt="">
+          </div>
+          <div class="game-rules" title="Game Rules"><i class="fa-solid fa-info"></i></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <div class="control">
+        <button class="check-btn">Check Word</button>
+      </div>
+    </main>
+
+  </section>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
