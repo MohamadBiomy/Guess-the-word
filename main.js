@@ -190,7 +190,8 @@ function checkWord(rows) {
     // checking word
     let guess = checkingWord.split("")
     let correct = randomWord.split("")
-    console.log(guess, correct)
+    guess = guess.map(letter => letter.toLowerCase())
+    correct = correct.map(letter => letter.toLowerCase())
     // win
     if (guess.join("") === correct.join("")) {
       rowsContainer.classList.add("pointer-events-none")
